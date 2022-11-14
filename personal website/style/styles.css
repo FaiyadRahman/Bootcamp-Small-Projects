@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(13, 17, 23);
+    color: white;
+    padding-left: 5%;
+}
+
+hr {
+    width: 75%;
+    border-style: solid ;
+    border-color: rgb(47, 225, 185);
+    border-width: 1px;
+}
+
+h1 {
+    color: rgb(47, 225, 185);
+}
+
+h3 {
+    color: rgb(47, 225, 185);
+}
+
+table{
+    border-spacing: 50%;
+}
+
+th,td {
+    padding: 15px;
+}
+
+.link {
+    text-align: center;
+}
