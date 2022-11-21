@@ -4,9 +4,7 @@ body {
 }
 
 h1 {
-    font-weight: 900;
-    font-size: 3.5rem;
-    line-height: 1.5;
+
 }
 
 h2 {
@@ -26,7 +24,7 @@ p {
 
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 5%;
 }  
 
 
@@ -61,10 +59,29 @@ p {
     margin: 5% 3% 5% 0;
 }
 
+.big-heading {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
 /* title image */
 .title-img {
-    width: 60%;
+    width: 20%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 23%;
+}
+
+@media (max-width: 991px) {
+    .title-img {
+        position: static;
+        transform: rotate(0);
+    }
+
+    #title{
+        text-align: center;
+    }
 }
 
 
@@ -72,6 +89,8 @@ p {
 /* Features */
 #features{
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
 }
 
 .feature-item {
@@ -96,6 +115,8 @@ p {
     text-align: center;
     background-color: #ef8172;
     color: white;
+    position: relative;
+    /* z-index: 1; */
 }
 
 .testimonials-img {
@@ -135,4 +156,28 @@ p {
     /* margin: 3% 2%; */
     padding: 3% 2%;
 
+}
+
+
+/* Call to Action */
+#cta {
+    text-align: center;
+    background-color: #ff4c68;
+    padding: 7% 15%;
+}
+
+.cta-text {
+    font-size: 3rem;
+    color: white;
+}
+
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 7% 15%;
+}
+
+.footer-icon {
+    margin: 2% 2% 0;
 }
