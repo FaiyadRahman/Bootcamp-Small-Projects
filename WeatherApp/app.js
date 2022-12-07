@@ -1,17 +1,90 @@
 const express = require("express");
 const https = require("https");
+const bodyParser = require("body-parser");
+const XMLHttpRequest = require("xhr2");
 
 const app = express();
 
-app.get("/", function (req, res) {
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?lat=53.5462055&lon=-113.491241&appid=9c7970fea23c41b449d4854fb2479fc3&units=metric";
-  https.get(url, function (response) {
-    console.log(response);
-  });
-  res.send("Server is Running");
-});
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(3000, function () {
   console.log("Server is Running on port 3000");
 });
+
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.post("/", function (req, res) {
+  var apiKey = "9c7970fea23c41b449d4854fb2479fc3";
+  var city = req.body.cityName;
+  var geoUrl =
+    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    city +
+    "&appid=" +
+    apiKey;
+  console.log("send req to: " + geoUrl);
+
+  GetHttpRequest(geoUrl).then((result) => {
+    console.log(result);
+    var latitude = result[0].lat;
+    var longitude = result[0].lon;
+
+    var units = "metric";
+    var weatherUrl =
+      "https://api.openweathermap.org/data/2.5/weather?lat=" +
+      latitude +
+      "&lon=" +
+      longitude +
+      "&appid=" +
+      apiKey +
+      "&units=" +
+      units;
+
+    https.get(weatherUrl, function (response) {
+      console.log(weatherUrl);
+      console.log(response.statusCode);
+      response.on("data", function (weatherDataJson) {
+        const weatherData = JSON.parse(weatherDataJson);
+
+        var temperature = weatherData.main.temp;
+        var description = weatherData.weather[0].description;
+        var iconID = weatherData.weather[0].icon;
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconID + "@2x.png";
+        res.write(
+          "<h1>The weather in " + city + " is " + temperature + "&degC</h1>"
+        );
+        res.write("<p>" + description + "</p>");
+        res.write("<img src=" + iconUrl + ">");
+        res.send();
+
+        console.log(temperature);
+        console.log(description);
+      });
+    });
+  });
+});
+
+function GetHttpRequest(url) {
+  // console.log("send req to: " + url);
+  // var request = new XMLHttpRequest();
+  // request.open("GET", url);
+  // request.send();
+  // var data = JSON.parse(request.responseText);
+  // console.log(data);
+
+  const promise = new Promise((resolve, reject) => {
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+
+    request.responseType = "json";
+
+    request.onload = function () {
+      // console.log(request.response);
+      resolve(request.response);
+    };
+
+    request.send();
+  });
+  return promise;
+}
