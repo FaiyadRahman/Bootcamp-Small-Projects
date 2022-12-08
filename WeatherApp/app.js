@@ -25,10 +25,8 @@ app.post("/", function (req, res) {
     cityUrlVersion +
     "&appid=" +
     apiKey;
-  console.log("send req to: " + geoUrl);
 
   GetHttpRequest(geoUrl).then((result) => {
-    console.log(result);
     var latitude = result[0].lat;
     var longitude = result[0].lon;
 
@@ -44,8 +42,6 @@ app.post("/", function (req, res) {
       units;
 
     https.get(weatherUrl, function (response) {
-      // console.log(weatherUrl);
-      console.log(response.statusCode);
       response.on("data", function (weatherDataJson) {
         const weatherData = JSON.parse(weatherDataJson);
 
@@ -59,22 +55,12 @@ app.post("/", function (req, res) {
         res.write("<p>" + description + "</p>");
         res.write("<img src=" + iconUrl + ">");
         res.send();
-
-        console.log(temperature);
-        console.log(description);
       });
     });
   });
 });
 
 function GetHttpRequest(url) {
-  // console.log("send req to: " + url);
-  // var request = new XMLHttpRequest();
-  // request.open("GET", url);
-  // request.send();
-  // var data = JSON.parse(request.responseText);
-  // console.log(data);
-
   const promise = new Promise((resolve, reject) => {
     const request = new XMLHttpRequest();
     request.open("GET", url);
@@ -82,7 +68,6 @@ function GetHttpRequest(url) {
     request.responseType = "json";
 
     request.onload = function () {
-      // console.log(request.response);
       resolve(request.response);
     };
 
