@@ -1,7 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const XMLHttpRequest = require("xhr2");
+var apiKey = process.env.WEATHER_API_KEY;
 
 const app = express();
 
@@ -16,7 +18,6 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  var apiKey = "9c7970fea23c41b449d4854fb2479fc3";
   var city = req.body.cityName;
   var cityUrlVersion = city.replace(/ /g, "%20");
   var geoUrl =
@@ -43,7 +44,7 @@ app.post("/", function (req, res) {
       units;
 
     https.get(weatherUrl, function (response) {
-      console.log(weatherUrl);
+      // console.log(weatherUrl);
       console.log(response.statusCode);
       response.on("data", function (weatherDataJson) {
         const weatherData = JSON.parse(weatherDataJson);
