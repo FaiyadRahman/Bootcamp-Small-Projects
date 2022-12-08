@@ -18,9 +18,10 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   var apiKey = "9c7970fea23c41b449d4854fb2479fc3";
   var city = req.body.cityName;
+  var cityUrlVersion = city.replace(/ /g, "%20");
   var geoUrl =
     "http://api.openweathermap.org/geo/1.0/direct?q=" +
-    city +
+    cityUrlVersion +
     "&appid=" +
     apiKey;
   console.log("send req to: " + geoUrl);
