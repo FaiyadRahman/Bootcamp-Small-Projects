@@ -1,0 +1,20 @@
+{
+  "name": "web-dev-learning",
+  "version": "1.0.0",
+  "description": "This repository is a place to gather all my work in my journey to learn web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaiyadRahman/Web-dev-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaiyadRahman/Web-dev-learning/issues"
+  },
+  "homepage": "https://github.com/FaiyadRahman/Web-dev-learning#readme"
+}
