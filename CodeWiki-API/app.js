@@ -14,6 +14,7 @@ app.use(
 
 app.use(express.static("public"));
 
+mongoose.set('strictQuery', true);
 mongoose.connect("mongodb://127.0.0.1:27017/wikiDB");
 
 const articleSchema = new mongoose.Schema({
@@ -58,6 +59,54 @@ app.route("/articles")
       }
     });
   });
+
+app.route("/articles/:articleTitle")
+  .get((req, res) => {
+    const articleTitle = req.params.articleTitle;
+    Article.findOne({title: articleTitle}, (err, foundArticle) => {
+      if (!err){
+        res.send(foundArticle);
+      } else {
+        res.send(err);
+      }
+    })
+  })
+  
+  .put((req, res) => {
+    const articleTitle = req.params.articleTitle;
+    Article.findOneAndUpdate({title: articleTitle}, {title: req.body.title, content: req.body.content}, {overwrite:true}, (err) => {
+      if (!err){
+        res.send("updated successfully");
+      } else {
+        res.send(err);
+      }
+    })
+  })
+
+  .patch((req, res) => {
+    const articleTitle = req.params.articleTitle;
+    Article.findOneAndUpdate({title: articleTitle}, {$set: req.body}, (err) => {
+      if (!err){
+        res.send("updated successfully");
+      } else {
+        res.send(err);
+      }
+    });
+  })
+
+  .delete((req, res) => {
+    const articleTitle = req.params.articleTitle;
+    Article.findOneAndDelete({title: articleTitle}, (err) => {
+      if (!err){
+        res.send("deleted successfully");
+      } else {
+        res.send(err);
+      }
+    });
+  })
+  ;
+
+
 
 app.listen(3000, () => {
   console.log("running on port 3000");
