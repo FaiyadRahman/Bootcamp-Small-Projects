@@ -1,0 +1,152 @@
+body {
+    font-family: 'Mulish', sans-serif;
+}
+p {
+    color: #a7a9be;
+}
+
+.navbar {
+    padding: 0.5% 3%;
+    /* background-color: rgb(255, 113, 91); */
+    background-image: linear-gradient(to left, #ff715b, #ff8906 );
+    font-weight: 800;
+}
+
+.nav-item {
+    padding: 0 1rem;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #0f0e17;
+}
+.navbar-brand {
+    padding-left: 3rem;
+}
+
+#title {
+    background-color: #0f0e17;
+    padding: 3%;
+    padding: 8%;
+}
+
+.big-name {
+    color: white;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.aspiring {
+    color: #ff8906;
+}
+
+.small-bio {
+    font-size: 1.2rem;
+    padding-right: 40%;
+    line-height: 2em;
+    text-align: left;
+    margin-top: 2.7em;
+    margin-bottom: 2.9rem;
+}
+
+.headshot {
+    width: 400px;
+    margin-left: 30%;
+    
+}
+
+.social-link {
+    margin-right: 2rem;
+}
+
+
+
+#about-me {
+    padding: 3% 15% 5%;
+}
+
+.about-me-paragraph {
+    color: #0f0e17;
+    font-size: 1.2rem;
+    padding: 0%;
+    line-height: 2em;
+    text-align: left;
+    margin: 2.9em 5% 2.9rem;
+}
+
+.about-me-heading {
+    color: #ff8906;
+    text-align: center;
+    font-weight: 700;    
+}
+
+.skills-container {
+    margin-top: 4rem;
+}
+
+.skill {
+    margin: 0.3em;
+}
+
+.btn.skill {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #0f0e17;
+    padding: 10px 20px 10px 20px;
+    border: solid #ff715b 2px;
+    text-decoration: none;
+}
+
+.btn.skill:hover {
+    background: #ff8906;
+    background-image: -webkit-linear-gradient(top, #ff8906, #ff715b);
+    background-image: -moz-linear-gradient(top, #ff8906, #ff715b);
+    background-image: -ms-linear-gradient(top, #ff8906, #ff715b);
+    background-image: -o-linear-gradient(top, #ff8906, #ff715b);
+    background-image: linear-gradient(to bottom, #ff8906, #ff715b);
+    text-decoration: none;
+}
+
+
+#projects {
+    background-color: #0f0e17;
+}
+
+@media (max-width: 767px) {
+    .big-name {
+        text-align: center;
+    }
+
+    .aspiring {
+        text-align: center;
+    }
+
+    .small-bio {
+        text-align: center;
+        padding: 0;
+    }
+
+    .headshot {
+        margin: 20% 0 0 0;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    .about-me-paragraph {
+        text-align: center;
+    }
+}
