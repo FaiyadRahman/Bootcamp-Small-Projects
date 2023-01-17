@@ -24,8 +24,6 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome Icons -->
-
     <!-- Faviocon -->
     <link rel="icon" href="./CSS/favicon.ico" />
   </head>
@@ -38,7 +36,7 @@
     ></script>
 
     <section id="navigation">
-      <nav class="navbar navbar-expand-md navbar-dark">
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">FR</a>
           <button
@@ -55,13 +53,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">About Me</a>
+                <a class="nav-link" href="#about-me">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#work-experience">Experience</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -123,7 +124,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <!-- <img class="headshot" src="/images/faiyad-circular.png" /> -->
+            <img class="headshot" src="./images/Faiyad-Headshot.png" />
           </div>
         </div>
       </div>
@@ -171,6 +172,9 @@
                 SQLite
               </button>
               <button class="btn btn-primary skill" type="button">
+                RESTful APIs
+              </button>
+              <button class="btn btn-primary skill" type="button">
                 User Authentication
               </button>
               <button class="btn btn-primary skill" type="button">
@@ -182,12 +186,265 @@
       </div>
     </section>
 
-    <section id="projects">
-      <div>
-        <div class="col"></div>
+    <section id="work-experience">
+      <div class="container-fluid">
+        <h1 class="work-experience-heading">Work Experience</h1>
+        <div class="row experience">
+          <div class="col-md-6 google">
+            <img class="google-logo" src="./images/google-logo.png" />
+            <h3 class="google-title">Google Developer Student Club</h3>
+          </div>
+          <div class="col-md-6 work">
+            <h3 class="work-title">Project Developer</h3>
+            <h6 class="work-date">January - April 2022</h6>
+            <p class="work-paragraph">
+              Worked in a team to create a Discord bot that scrapes jobs to help
+              students identify internship oppurtunitiess based on a search
+              criteria. Implemented the webscraping functionality that has
+              identified 200+ oppurtunities.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact-me"></section>
+    <section id="projects">
+      <h1 class="project-heading">Personal Projects</h1>
+
+      <div class="row card-row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title">Discord Job Bot</h5>
+              <a
+                href="https://github.com/FaiyadRahman/Google-DSC-Discord-Job-Bot"
+                class="card-github"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#ff8906"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Discord bot that scrapes Indeed and Linkdin for jobs that match
+                a user-specified criteria. Implemented the webscraping
+                functionality using the Beautiful Soup module in Python.
+                Filtered and sorted the data using the Pandas module before
+                adding them to a SQLite database.
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="tools">Python</p>
+              <p class="tools">Beautiful Soup</p>
+              <p class="tools">Pandas</p>
+              <p class="tools">SQLite</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title">Secrets</h5>
+              <a
+                href="https://github.com/FaiyadRahman/Secrets-Webapp"
+                class="card-github"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#ff8906"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Webapp that allows users to sign-in and submit their secrets
+                anonymously and read other people's secrets. The main purpose of
+                this project was to learn differnt strategies of user
+                authentication and encryption. Implemented both local and Google
+                (OAuth 2.0) authentication strategies, as well as hashing and
+                salting passwords.
+              </p>
+              <a href="https://secrets-oeso.onrender.com"
+                ><button type="button" class="try-it-btn">
+                  Try it out!
+                </button></a
+              >
+            </div>
+            <div class="card-footer">
+              <p class="tools">MongoDB</p>
+              <p class="tools">Express.js</p>
+              <p class="tools">Node.js</p>
+              <p class="tools">Passport.js</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title">To-Do List App</h5>
+              <a
+                href="https://github.com/FaiyadRahman/ToDoList"
+                class="card-github"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#ff8906"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                full-stack web application that utilizes MongoDB as the
+                database, Express as the web framework, and Node.js as the
+                runtime environment. It allows users to create, read, update,
+                and delete their own personal todo lists, with the ability to
+                track and organize tasks.
+              </p>
+              <br />
+              <a href="https://todolist-khvd.onrender.com"
+                ><button type="button" class="try-it-btn">
+                  Try it out!
+                </button></a
+              >
+            </div>
+            <div class="card-footer">
+              <p class="tools">MongoDB</p>
+              <p class="tools">Express.js</p>
+              <p class="tools">Node.js</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title">Movies Database Manager</h5>
+              <a
+                href="https://github.com/FaiyadRahman/Cmput-291-Movies-MongoDB-database-project"
+                class="card-github"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#ff8906"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Command-line interface for managing movie-related information in
+                MongoDB. The database stores information on movies, ratings, and
+                cast members, and supports C.R.U.D operations. Users can easily
+                add new movies and cast members, update or delete existing
+                entries, and search for movies by various criteria such as
+                title, cast member, and ratings.
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="tools">Python</p>
+              <p class="tools">MongoDB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row card-row-middle row-cols-1 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title">Personal Portfolio Website</h5>
+              <a
+                href="https://github.com/FaiyadRahman/Personal-website"
+                class="card-github"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="#ff8906"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  /></svg
+              ></a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                My personal portfolio website is a showcase of my professional
+                skills and experience. Built with HTML, CSS, and Bootstrap, the
+                website is designed to be responsive and visually appealing. It
+                features a clean, modern layout and easy navigation
+              </p>
+              <br />
+              <br />
+              <br />
+            </div>
+            <div class="card-footer">
+              <p class="tools">HTML</p>
+              <p class="tools">CSS</p>
+              <p class="tools">Bootstrap</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container-fluid">
+        <h1 class="work-experience-heading">Get in Touch</h1>
+        <p class="contact-paragraph">
+          I am actively seeking new oppurtunities, especially for Summer/Fall
+          2023. If you have any questions or are interested in working with me,
+          please feel free to reach out below!
+        </p>
+        <a href="mailto:faiyad.r@yahoo.com">
+          <button type="button" class="contact-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+              />
+            </svg>
+            Email
+          </button>
+        </a>
+      </div>
+    </section>
   </body>
 </html>

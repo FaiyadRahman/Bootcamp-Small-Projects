@@ -7,8 +7,7 @@ p {
 
 .navbar {
     padding: 0.5% 3%;
-    /* background-color: rgb(255, 113, 91); */
-    background-image: linear-gradient(to left, #ff715b, #ff8906 );
+    background-image: linear-gradient(to left, #e53170, #ff8906 );
     font-weight: 800;
 }
 
@@ -29,8 +28,7 @@ p {
 
 #title {
     background-color: #0f0e17;
-    padding: 3%;
-    padding: 8%;
+    padding: 8% 8% 6.5%;
 }
 
 .big-name {
@@ -54,7 +52,7 @@ p {
 
 .headshot {
     width: 400px;
-    margin-left: 30%;
+    margin: 15% 30%;
     
 }
 
@@ -62,7 +60,9 @@ p {
     margin-right: 2rem;
 }
 
-
+.bi:hover {
+    fill: white;
+}
 
 #about-me {
     padding: 3% 15% 5%;
@@ -74,7 +74,7 @@ p {
     padding: 0%;
     line-height: 2em;
     text-align: left;
-    margin: 2.9em 5% 2.9rem;
+    margin: 2rem 5% 2.9rem;
 }
 
 .about-me-heading {
@@ -84,20 +84,14 @@ p {
 }
 
 .skills-container {
-    margin-top: 4rem;
+    margin-top: 1.5rem;
 }
 
 .skill {
-    margin: 0.3em;
+    margin: 0.1em;
 }
 
 .btn.skill {
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
@@ -105,23 +99,168 @@ p {
     font-size: 20px;
     background: #0f0e17;
     padding: 10px 20px 10px 20px;
-    border: solid #ff715b 2px;
+    border: solid #e53170 2px;
     text-decoration: none;
 }
 
 .btn.skill:hover {
     background: #ff8906;
-    background-image: -webkit-linear-gradient(top, #ff8906, #ff715b);
-    background-image: -moz-linear-gradient(top, #ff8906, #ff715b);
-    background-image: -ms-linear-gradient(top, #ff8906, #ff715b);
-    background-image: -o-linear-gradient(top, #ff8906, #ff715b);
-    background-image: linear-gradient(to bottom, #ff8906, #ff715b);
+    background-image: -webkit-linear-gradient(top, #ff8906, #e53170);
+    background-image: -moz-linear-gradient(top, #ff8906, #e53170);
+    background-image: -ms-linear-gradient(top, #ff8906, #e53170);
+    background-image: -o-linear-gradient(top, #ff8906, #e53170);
+    background-image: linear-gradient(to bottom, #ff8906, #e53170);
     text-decoration: none;
 }
 
+#work-experience {
+    padding: 3% 15% 1%;
+    background-color: #0f0e17;
+}
+
+.experience {
+    margin: 2.9em 1% 2rem;  
+}
+
+.work-experience-heading {
+    color: white;
+    text-align: center;
+    font-weight: 700;  
+}
+
+.google {
+    text-align: center;
+    padding-right: 4rem;
+    padding-top: 1em;
+}
+.google-logo {
+    width: 15%;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.google-title {
+    color: white;
+}
+
+.work {
+    padding-left: 4rem;
+}
+.work-title {
+    color: #ff8906;
+}
+
+.work-date {
+    color: #a7a9be;
+}
+
+.work-paragraph {
+    color: white;
+    margin: 2rem 0;
+    line-height: 2;
+}
 
 #projects {
+    padding: 3% 15% 1%;
+}
+
+.project-heading {
+    text-align: center;
+    font-weight: 700;  
+    color: #0f0e17;
+}
+
+.card-row {
+    margin-top: 3%;
+}
+
+.card-row-middle {
+    margin-top: 0;
+    padding: 0 25%;
+}
+
+.card {
     background-color: #0f0e17;
+    border-color: #ff8906;
+}
+
+.card-title {
+    color: white;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0.2em 0;
+}
+
+.card-github {
+    float: right;
+    margin-right: 2rem;
+}
+
+.card-text {
+    padding-top: 1rem;
+    padding-top: 1rem;
+}
+
+.try-it-btn {
+    -webkit-border-radius: 9;
+    -moz-border-radius: 9;
+    border-radius: 9px;
+    color: #ffffff;
+    font-size: 1em;
+    background: #e53170;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+  
+.try-it-btn:hover {
+    background: #bf3b69;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: white;
+}
+
+.card-header {
+    border-color: #ff8906;
+}
+.card-footer {
+    border-color: #ff8906;
+    text-align: center;
+}
+
+.tools {
+    color: white;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+#contact {
+    margin-top: 3%;
+    background-color: #0f0e17;
+    padding: 3% 22% 1%;
+    text-align: center;
+}
+
+.contact-paragraph {
+    margin: 5% 20%;
+    line-height: 2em;
+}
+
+.contact-btn {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #ff8906;
+    padding: 6.66px 13.22px 6.66px 13.32px;
+    text-decoration: none;
+  }
+  
+.contact-btn:hover {
+    background: #e53170;
+    text-decoration: none;
 }
 
 @media (max-width: 767px) {
@@ -135,11 +274,11 @@ p {
 
     .small-bio {
         text-align: center;
-        padding: 0;
+        padding-right: 0;
     }
 
     .headshot {
-        margin: 20% 0 0 0;
+        margin: 10% 15% 0;
     }
 
     .social-links {
@@ -148,5 +287,24 @@ p {
 
     .about-me-paragraph {
         text-align: center;
+    }
+
+    #work-experience {
+        text-align: center;
+    }
+
+    .google {
+        padding-right: 0;
+    }
+    .work {
+        padding-left: 0;
+        padding: 0%;
+    }
+    
+    .experience {
+        margin: auto;
+    }
+    .card-row-middle {
+        padding: 0;
     }
 }
