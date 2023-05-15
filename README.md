@@ -1,2 +1,2 @@
-# Web-dev-learning
-This repository is a place to gather all my work in my journey to learn web development
+# Bootcamp Small Projects
+This repository is a place to gather all the small projects I built while learning web development through The Complete 2023 Web Development Bootcamp on Udemy
